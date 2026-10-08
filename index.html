@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Clicker</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="score">
+        <span id="score">0</span>
+        <small>монет</small>
+      </div>
+      <div class="per-sec">+<span id="perSec">0</span>/сек</div>
+    </header>
+
+    <main>
+      <button id="clickBtn" class="coin">
+        <span>💰</span>
+      </button>
+    </main>
+
+    <section class="shop">
+      <h3>Улучшения</h3>
+
+      <div class="item" data-type="click">
+        <div>
+          <b>+1 за клик</b>
+          <small>Цена: <span id="clickCost">10</span></small>
+        </div>
+        <button onclick="buyClick()">Купить</button>
+      </div>
+
+      <div class="item" data-type="auto">
+        <div>
+          <b>+1 в секунду</b>
+          <small>Цена: <span id="autoCost">50</span></small>
+        </div>
+        <button onclick="buyAuto()">Купить</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

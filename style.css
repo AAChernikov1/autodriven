@@ -1,0 +1,124 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, sans-serif;
+  background: #1a1a2e;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.score {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.score small {
+  font-size: 14px;
+  color: #aaa;
+  margin-left: 6px;
+}
+
+.per-sec {
+  background: #16213e;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #4ade80;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(circle at 30% 30%, #ffe066, #f0a500);
+  font-size: 80px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(255, 200, 0, 0.4);
+  transition: transform 0.05s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin:active {
+  transform: scale(0.92);
+}
+
+.coin.pop {
+  animation: pop 0.15s;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.shop {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 14px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.shop h3 {
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #0f3460;
+}
+
+.item:last-child { border: none; }
+
+.item small {
+  display: block;
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.item button {
+  background: #4ade80;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.item button:active {
+  transform: scale(0.95);
+}
